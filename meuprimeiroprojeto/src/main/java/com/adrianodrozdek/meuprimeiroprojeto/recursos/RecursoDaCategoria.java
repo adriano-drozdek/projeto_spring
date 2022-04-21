@@ -15,7 +15,10 @@ import com.adrianodrozdek.meuprimeiroprojeto.entities.Categoria;
 public class RecursoDaCategoria {
 
 	@GetMapping
-	public ResponseEntity<List<Categoria>> findAll(){
-		
+	public ResponseEntity<List<Categoria>> findAll() {
+		List<Categoria> list = new ArrayList<>();
+		list.add(new Categoria(1l, "Eletronicos"));
+		list.add(new Categoria(2L, "Caderno"));
+		return ResponseEntity.ok().body(list);
 	}
 }
