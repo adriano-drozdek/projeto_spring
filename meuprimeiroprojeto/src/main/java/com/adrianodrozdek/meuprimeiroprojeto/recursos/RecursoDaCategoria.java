@@ -21,4 +21,6 @@ public class RecursoDaCategoria {
 		list.add(new Categoria(2L, "Caderno"));
 		return ResponseEntity.ok().body(list);
 	}
+	
+	@GetMapping(value = "/{id}")
 }
